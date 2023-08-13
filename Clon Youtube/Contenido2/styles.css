@@ -1,0 +1,187 @@
+
+/* Estilos para el MAIN */
+
+.main-container {
+    max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+    margin:  center; /* Centra el contenido horizontalmente */
+    padding: 20px; /* Ajusta el relleno del contenedor */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #fff;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 10;
+}
+
+.user-menu {
+    font-weight: 10x;
+    font-size: 20px;
+
+    
+}
+.button4 {
+    margin-top: 0px; /* Agregamos margen superior */
+    margin-left: 0px; /* Agregamos margen izquierdo */
+    margin-right: 300px; /* Agregamos margen derecho */
+    font-size: 25px; /* Tamaño de fuente del campo de entrada */
+    margin-bottom: 0px; /* Agregamos margen inferior */
+}
+
+.user-menu button5 {
+    margin-top: 0px; /* Agregamos margen superior */
+    margin-left: 200px; /* Agregamos margen izquierdo */
+    margin-right: 0px; /* Agregamos margen derecho */
+    font-size: 25px; /* Tamaño de fuente del campo de entrada */
+}
+
+.user-menu button6 {
+    margin-top: 0px; /* Agregamos margen superior */
+    margin-left: 200px; /* Agregamos margen izquierdo */
+    margin-right: 0px; /* Agregamos margen derecho */
+    font-size: 25px; /* Tamaño de fuente del campo de entrada */
+}
+
+.search-bar {
+    width: 100%; /* Ancho completo para ocupar el espacio disponible */
+    padding: 1px; /* Ajusta el relleno según tus preferencias */
+    font-size: 18px; /* Tamaño de fuente de la barra de búsqueda */
+    margin-left: 350px; /* Agregamos margen izquierdo */
+    margin-right: 100px; /* Agregamos margen derecho */
+    margin-top: center; /* Agregamos margen superior */
+    margin-bottom: 0px; /* Agregamos margen inferior */
+}
+
+.search-bar input[type="text"] {
+    padding: 15px;
+    border: 1px solid #bebebe;
+    border-radius: 0px;
+    width: 60%; /* Ancho completo para ocupar el espacio disponible */
+    padding: 5px; /* Ajusta el relleno según tus preferencias */
+    font-size: 18px; /* Tamaño de fuente del campo de entrada */
+}
+
+.search-bar button {
+    background-color: rgba(105, 105, 105, 0);
+    color: rgb(0, 0, 0);
+    border: 1px;
+    border-radius: 0px;
+    margin-left: -35px;
+    cursor: pointer;
+    font-size: 18px; /* Tamaño de fuente del campo de entrada */
+}
+.search-bar button2 {
+    background-color: rgba(187, 187, 187, 0.5);
+    color: rgb(0, 0, 0);
+    border: 1 none;
+    border-radius: 0px;
+    margin-left: -1px;
+    cursor: pointer;
+    padding: 6.5px 12px; /* Ajusta el relleno vertical y horizontal */
+    font-size: 18px; /* Tamaño de fuente del botón de búsqueda */
+}
+.search-bar button3 {
+    background-color: rgba(105, 105, 105, 0);
+    color: rgb(0, 0, 0);
+    border: 1px;
+    border-radius: 0px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 25px; /* Tamaño de fuente del campo de entrada */
+}
+
+
+
+/* Estilos para el contenido principal */
+main {
+    display: flex;
+}
+
+.content {
+    flex: 1;
+    padding: 0px;
+    margin-top: 50px; /* Agregamos margen superior */
+    margin-left: 100px; /* Agregamos margen izquierdo */
+}
+
+/* Estilos para la sección de videos sugeridos */
+
+.suggested-videos {
+    padding: 20px;
+    background-color: #ffffff;
+    width: 400px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Cambiamos a overflow-y para habilitar la barra de desplazamiento vertical */
+    max-height: calc(100vh - 120px);
+    border: 1px solid #cacaca;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px; /* Agregamos margen superior */
+    margin-right: 150px; /* Agregamos margen derecho */
+    
+    
+    
+}
+
+.suggested-video {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.suggested-video iframe {
+    width: 200px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.suggested-video-details {
+    flex: 1;
+}
+
+.suggested-video h4 {
+    margin: 5px 0;
+}
+
+.suggested-videos button6 {
+    margin-top: -65px; /* Agregamos margen superior */
+    margin-left: 300px; /* Agregamos margen izquierdo */
+    margin-right: 0px; /* Agregamos margen derecho */
+    font-size: 25px; /* Tamaño de fuente del campo de entrada */
+}
+.suggested-videos button7 {
+    margin-top: 20px; /* Agregamos margen superior */
+    margin-left: -5px; /* Agregamos margen izquierdo */
+    margin-right: 0px; /* Agregamos margen derecho */
+    font-size: 25px; /* Tamaño de fuente del campo de entrada */
+    
+}
+.suggested-videos button8 {
+    margin-top: -33px; /* Agregamos margen superior */
+    margin-left: 30px; /* Agregamos margen izquierdo */
+    margin-right: 0px; /* Agregamos margen derecho */
+    font-size: 25px; /* Tamaño de fuente del campo de entrada */
+
+}
+.suggested-videos button9 {
+    margin-top: -33px; /* Agregamos margen superior */
+    margin-left: 307px; /* Agregamos margen izquierdo */
+    margin-right: 0px; /* Agregamos margen derecho */
+    font-size: 25px; /* Tamaño de fuente del campo de entrada */
+    margin-bottom: 30px; /* Agregamos margen inferior */
+
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+}
