@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Alumno</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-geometrico-plano_23-2148967370.jpg?w=2000'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+        .container {
+            background-color: #090058;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 5px rgba(197, 4, 4, 0);
+            width: 500px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: white; /* Color de texto para las etiquetas de selección */
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: center;
+            color: white; /* Cambia el color del texto a blanco */  
+        }
+        td {
+            color: black; /* Cambia el color del texto a negro */
+        }
+        th {
+            background-color: #090058;
+        }
+        tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        .download-btn {
+            background-color: #28a745;
+            color: #ffffff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .download-btn:hover {
+            background-color: #218838;
+        }
+        title {
+            text-align: center; /* Centra el título */
+        }
+        h1 {
+            text-align: center; /* Centra el título */
+            line-height: 0.5;
+            
+        }
+        h2 {
+            text-align: center; /* Centra el título */
+            line-height: 4;
+        }
+        h4 {
+            text-align: center; /* Centra el título */
+            line-height: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: white;">Registro de Alumnos</h1>
+        <h4 style="color: white;">Siclo Escolar 2023</h4>
+        <h4>📚📙📖</h4>
+        <h2 style="color: white;">Datos del Alumno</h2>
+        <div></div>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required>
+            </div>
+            <div class="form-group">
+                <label for="genero">Género:</label>
+                <select id="genero" name="genero" required>
+                    <option value="">Selecciona un género</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="grado">Grado a Cursar:</label>
+                <select id="grado" name="grado" required>
+                    <option value="">Selecciona el grado a cursar</option>
+                    <option value="Primero Primaria">Primero Primaria</option>
+                    <option value="Segundo Primaria">Segundo Primaria</option>
+                    <option value="Tercero Primaria">Tercero Primaria</option>
+                    <option value="Cuarto Primaria">Cuarto Primaria</option>
+                    <option value="Quinto Primaria">Quinto Primaria</option>
+                    <option value="Sexto Primaria">Sexto Primaria</option>
+                    <option value="Primero Básico">Primero Básico</option>
+                    <option value="Segundo Básico">Segundo Básico</option>
+                    <option value="Tercero Básico">Tercero Básico</option>
+                </select>
+            </div>
+            <h2 style="color: white;">Datos del Padre</h2>
+            <div class="form-group">
+                <label for="nombre_padre">Nombre:</label>
+                <input type="text" id="nombre_padre" name="nombre_padre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido_padre">Apellido:</label>
+                <input type="text" id="apellido_padre" name="apellido_padre" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="number" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="button" id="registrar-btn" class="btn">Registrar</button>
+        </form>
+    </div>
+    <div class="records" id="registros">
+        <h1 style="color: #090058;">Alumnos Registrados</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Género</th>
+                    <th>Grado</th>
+                    <th>Nombre del Padre</th>
+                    <th>Apellido del Padre</th>
+                    <th>Teléfono</th>
+                    <th>Correo Electrónico</th>
+                </tr>
+            </thead>
+            <tbody id="registros-body">
+                <!-- Los registros se agregarán aquí dinámicamente -->
+            </tbody>
+        </table>
+        <button id="descargar-excel" class="download-btn">Descargar Excel</button>
+    </div>
+    <script>
+        const registrosBody = document.getElementById("registros-body");
+        const registrarBtn = document.getElementById("registrar-btn");
+        const descargarExcelBtn = document.getElementById("descargar-excel");
+
+        registrarBtn.addEventListener("click", () => {
+            const nombre = document.getElementById("nombre").value;
+            const apellido = document.getElementById("apellido").value;
+            const edad = document.getElementById("edad").value;
+            const genero = document.getElementById("genero").value;
+            const grado = document.getElementById("grado").value;
+            const nombre_padre = document.getElementById("nombre_padre").value;
+            const apellido_padre = document.getElementById("apellido_padre").value;
+            const telefono = document.getElementById("telefono").value;
+            const email = document.getElementById("email").value;
+
+            if (nombre && apellido && edad && email) {
+                const newRow = document.createElement("tr");
+                newRow.innerHTML = `
+                    <td>${nombre}</td>
+                    <td>${apellido}</td>
+                    <td>${edad}</td>
+                    <td>${genero}</td>
+                    <td>${grado}</td>
+                    <td>${nombre_padre}</td>
+                    <td>${apellido_padre}</td>
+                    <td>${telefono}</td>
+                    <td>${email}</td>
+                    
+                `;
+                registrosBody.appendChild(newRow);
+
+                // Limpiar los campos del formulario después del registro
+                document.getElementById("nombre").value = "";
+                document.getElementById("apellido").value = "";
+                document.getElementById("edad").value = "";
+                document.getElementById("genero").value = "";
+                document.getElementById("grado").value = "";
+                document.getElementById("nombre_padre").value = "";
+                document.getElementById("apellido_padre").value = "";
+                document.getElementById("telefono").value = "";
+                document.getElementById("email").value = "";
+                
+            }
+        });
+
+        descargarExcelBtn.addEventListener("click", () => {
+            // Simulación de generación de archivo Excel (no recomendado para producción)
+            const table = document.querySelector("table");
+            const tableHTML = table.outerHTML;
+
+            const blob = new Blob([tableHTML], { type: "application/vnd.ms-excel" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "registros_alumnos.xls";
+            a.click();
+        });
+    </script>
+</body>
+</html>
+
