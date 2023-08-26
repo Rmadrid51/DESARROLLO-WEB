@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/008/856/902/non_2x/asphalt-road-in-mountain-valley-landscape-illustration-nature-highway-through-meadow-and-trees-cartoon-background-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .hanger {
+    width: 10px;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .semaphore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .frame {
+    width: 150px;
+    height: 350px;
+    border: 10px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    position: relative;
+  }
+
+  .light-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .light {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: gray;
+  }
+
+  .red {
+    background-color: red;
+  }
+
+  .yellow {
+    background-color: yellow;
+  }
+
+  .green {
+    background-color: green;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="hanger"></div>
+    <div class="semaphore">
+      <div class="frame">
+        <div class="light-container">
+          <div class="light red"></div>
+        </div>
+        <div class="light-container">
+          <div class="light green"></div>
+        </div>
+        <div class="light-container">
+          <div class="light yellow"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function changeLights() {
+      const lights = document.querySelectorAll('.light');
+      let activeLight = 0;
+      
+      setInterval(() => {
+        lights.forEach(light => {
+          light.classList.remove('red', 'yellow', 'green');
+        });
+
+        if (activeLight === 0) {
+          lights[1].classList.add('green');
+        } else if (activeLight === 1) {
+          lights[2].classList.add('yellow');
+        } else {
+          lights[0].classList.add('red');
+        }
+
+        activeLight = (activeLight + 1) % 3;
+      }, 3000);
+    }
+
+    changeLights();
+  </script>
+</body>
+</html>
