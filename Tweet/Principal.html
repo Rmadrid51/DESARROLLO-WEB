@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #ae00ff; /* Color de fondo */
+  }
+
+  .container {
+    width: 50%;
+    padding: 20px;
+    border: 2px solid #000;
+    text-align: center;
+    background-color: #fff; /* Color de fondo del recuadro */
+  }
+
+  #datetime {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  #tweetInput {
+    width: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  #addButton {
+    width: 28%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .tweetContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .tweetText {
+    flex-grow: 1;
+  }
+
+  .deleteButton {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div id="datetime"></div>
+  <br>
+  <h1>Tweet</h1>
+  <br>
+  <div>
+    <input type="text" id="tweetInput" placeholder="Escribe tu tweet">
+    <button id="addButton" onclick="agregarTweet()">Agregar</button>
+  </div>
+
+  <div id="tweetContainer"></div>
+</div>
+
+<script>
+function agregarTweet() {
+  var tweetText = document.getElementById("tweetInput").value;
+  if (tweetText.trim() === "") {
+    return;
+  }
+
+  var tweetContainer = document.getElementById("tweetContainer");
+
+  var tweetDiv = document.createElement("div");
+  tweetDiv.className = "tweetContainer";
+
+  var tweetTextDiv = document.createElement("div");
+  tweetTextDiv.className = "tweetText";
+  tweetTextDiv.textContent = tweetText;
+
+  var deleteButton = document.createElement("button");
+  deleteButton.className = "deleteButton";
+  deleteButton.textContent = "Eliminar";
+  deleteButton.addEventListener("click", function() {
+    tweetContainer.removeChild(tweetDiv);
+  });
+
+  tweetDiv.appendChild(tweetTextDiv);
+  tweetDiv.appendChild(deleteButton);
+
+  tweetContainer.appendChild(tweetDiv);
+
+  document.getElementById("tweetInput").value = "";
+}
+
+function actualizarHoraFecha() {
+  var now = new Date();
+  var datetimeDiv = document.getElementById("datetime");
+  datetimeDiv.innerHTML = now.toLocaleString();
+}
+
+actualizarHoraFecha(); // Llamar a la función al cargar la página
+</script>
+
+</body>
+</html>
