@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción de Comerciante Individual y Empresa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 45%;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 1.5em;
+        }
+        .header h3 {
+            font-size: 1.2em;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .form-group_superior label {
+            width: 300%;
+            text-align: right;
+            margin-bottom: 2px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+        }
+        .form-check {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="form-group_superior">
+        <label for="numero formato">Número Formato</label>
+        <input type="text" id="numero formato" name="numero formato">
+        <label for="codigo">Codigo</label>
+        <input type="text" id="codigo" name="codigo">
+    </div>
+
+    <div class="header">
+        <p></p>
+        <h2>Este formato de solicitud es GRATUITO, PROHIBIDO su venta.</h2>
+        <h3>Solicitud de Inscripción de Comerciante Individual y Empresa</h3>
+        <p></p>
+        
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label for="primerNombre">Primer Nombre</label>
+            <input type="text" id="primerNombre" name="primerNombre">
+        </div>
+
+        <div class="form-group">
+            <label for="segundoNombre">Segundo Nombre</label>
+            <input type="text" id="segundoNombre" name="segundoNombre">
+        </div>
+
+        <div class="form-group">
+            <label for="otroNombre">Otro Nombre</label>
+            <input type="text" id="otroNombre" name="otroNombre">
+        </div>
+
+        <div class="form-group">
+            <label for="primerApellido">Primer Apellido</label>
+            <input type="text" id="primerApellido" name="primerApellido">
+        </div>
+
+        <div class="form-group">
+            <label for="segundoApellido">Segundo Apellido</label>
+            <input type="text" id="segundoApellido" name="segundoApellido">
+        </div>
+
+        <div class="form-group">
+            <label for="apellidoCasada">Apellido Casada</label>
+            <input type="text" id="apellidoCasada" name="apellidoCasada">
+        </div>
+
+        <div class="form-group">
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad" min="0">
+        </div>
+
+        <div class="form-group">
+            <label for="estadoCivil">Estado Civil</label>
+            <select id="estadoCivil" name="estadoCivil">
+                <option value="" selected>- SELECCIONE UNA OPCIÓN -</option>
+                <option value="soltero">Soltero</option>
+                <option value="casado">Casado</option>  
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="nacionalidad">Nacionalidad</label>
+            <input type="text" id="nacionalidad" name="nacionalidad">
+        </div>
+
+        <div class="form-group">
+            <label for="profesion">Profesión u Oficio</label>
+            <input type="text" id="profesion" name="profesion">
+        </div>
+
+        <div class="form-group">
+            <label for="domicilio">Con Domicilio en el Departamento de</label>
+            <input type="text" id="domicilio" name="domicilio">
+        </div>
+
+        <div class="form-group">
+            <label for="residencia">Con Residencia en</label>
+            <input type="text" id="residencia" name="residencia">
+        </div>
+
+        <div class="form-group">
+            <label for="documento">Documento de Identificación</label><br>
+            <div class="form-check">
+                <input type="checkbox" id="pasaporte" name="documento" value="pasaporte"> Pasaporte
+                <input type="checkbox" id="dpi" name="documento" value="dpi"> Documento Personal de Identificación (DPI)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="nit">NIT</label>
+            <input type="text" id="nit" name="nit">
+        </div>
+
+        <div class="form-group">
+            <label for="telefono">No. de Teléfono y/o Celular</label>
+            <input type="text" id="telefono" name="telefono">
+        </div>
+
+        <div class="form-group">
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" name="correo">
+        </div>
+
+        <div class="form-group">
+            <label for="atentamente">Atentamente</label>
+            <label for="atentamente">PIDO:</label>
+            <div class="form-check">
+                <input type="checkbox" id="comersiante individual" name="comersiante individual" value="comersiante individual">  Que se me inscriba como comerciante individual    
+                <input type="checkbox" id="inscripcion propiedad" name="inscripcion propiedad" value="inscripcion propiedad"> Que se inscriba la siguiente empresa de mi propiedad o Propiedad de:
+                <input type="text" id="propiedadd" name="propiedad">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-group">
+            <label for="nombreComercial">Nombre Comercial</label>
+            <input type="text" id="nombreComercial" name="nombreComercial">
+        </div>
+
+        <div class="form-group">
+            <label for="direccionCompleta">Dirección Completa</label>
+            <input type="text" id="direccionCompleta" name="direccionCompleta">
+        </div>
+
+        <div class="form-group">
+            <label for="objeto">Objeto</label>
+            <textarea id="objeto" name="objeto" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="fechaInicio">Fecha de inicio de actividades</label>
+            <input type="date" id="fechaInicio" name="fechaInicio">
+            <div class="form-check">
+                <input type="checkbox" id="alInscribirse" name="alInscribirse"> al inscribirse
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="capital">Capital: Q.</label>
+            <input type="number" id="capital" name="capital">
+            <div class="form-check">
+                <input type="checkbox" id="sucursal" name="sucursal"> Sucursal
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="categoria">Categoría: Única</label>
+            <input type="text" id="categoria" name="categoria">
+        </div>
+
+        <div class="form-group">
+            <label for="administrador">Administrador, Gerente o Factor</label>
+            <input type="text" id="administrador" name="administrador">
+        </div>
+
+        <div class="form-group">
+            <label for="regimenMatrimonial">Si es casado, indique régimen matrimonial</label>
+            <input type="text" id="regimenMatrimonial" name="regimenMatrimonial">
+        </div>
+
+        <div class="form-group">
+            <label for="numeroComerciante">Si el Propietario está inscrito como comerciante o Sociedad, indique No.</label>
+            <input type="text" id="numeroComerciante" name="numeroComerciante">
+            <label for="folio">Folio</label>
+            <input type="text" id="folio" name="folio">
+            <label for="libro">Libro</label>
+            <input type="text" id="libro" name="libro">
+        </div>
+
+        <div class="form-group">
+            <label for="empleados">Número de Empleados a contratar</label>
+            <input type="number" id="empleados" name="empleados" min="0">
+        </div>
+
+        <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input type="text" id="fecha" name="fecha" value="20/07/2024 16:07:11" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="firma">F:</label>
+            <input type="text" id="firma" name="firma">
+        </div>
+
+     
+    </form>
+</div>
+
+</body>
+</html>
