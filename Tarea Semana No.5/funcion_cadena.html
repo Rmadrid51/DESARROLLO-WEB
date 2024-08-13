@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Función Cadena</title>
+</head>
+<body>
+    <script>
+        function CadPalindromo(cadena) {
+            let cadenaLimpia = cadena.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+            let cadenaReversa = cadenaLimpia.split('').reverse().join('');
+            return cadenaLimpia === cadenaReversa;
+        }
+
+        console.log(CadPalindromo("La ruta nos aportó otro paso natural")); // true
+        console.log(CadPalindromo("Hola Mundo")); // false
+    </script>
+</body>
+</html>
