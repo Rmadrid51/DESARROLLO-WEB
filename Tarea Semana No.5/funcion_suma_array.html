@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion Suma Array</title>
+</head>
+<body>
+    <h1>
+        Escribe una función que tome un array de números como argumento y devuelva la suma de todos los elementos.
+
+    </h1>
+    <script>
+        function sumaArray(numeros) {
+            return numeros.reduce((total, numero) => total + numero, 0);
+        }
+
+        console.log(sumaArray([1, 2, 3, 4, 5])); 
+    </script>
+</body>
+</html>

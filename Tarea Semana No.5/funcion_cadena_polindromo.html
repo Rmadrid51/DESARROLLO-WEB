@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Función Cadena</title>
+</head>
+<body>
+    <h1>
+        Crea una función que tome una cadena y verifique si es un palíndromo (se lee igual al revés).
+    </h1>
+
+    <script>
+        function esPalindromo(cadena) {
+            let cadenaLimpia = cadena.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+            let cadenaReves = cadenaLimpia.split('').reverse().join('');
+            let esPalindromo = cadenaLimpia === cadenaReves;
+
+            if (esPalindromo) {
+                console.log(`"${cadena}" es un palíndromo.`);
+            } else {
+                console.log(`"${cadena}" no es un palíndromo.`);
+            }
+
+            return esPalindromo;
+        }
+
+        esPalindromo("La ruta nos aportó otro paso natural"); 
+        esPalindromo("Hola Mundo"); 
+    </script>
+
+</body>
+</html>

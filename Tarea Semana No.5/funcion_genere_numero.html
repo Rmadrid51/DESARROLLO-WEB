@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Función que genere numeros aleatorios</title>
+</head>
+<body>
+
+    <h1>
+        Escribe una función que genere n números aleatorios únicos dentro de un rango dado
+    </h1>
+    <script>
+        function generarNumerosAleatorios(n, min, max) {
+            if (max - min + 1 < n) {
+                throw new Error("El rango establecido es demasiado pequeño para generar la cantidad de números únicos solicitados.");
+            }
+
+            let numeros = new Set();
+
+            while (numeros.size < n) {
+                let numeroAleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
+                numeros.add(numeroAleatorio);
+            }
+            
+            return Array.from(numeros);
+        }
+
+        console.log(generarNumerosAleatorios(5,10,20));
+    </script>
+</body>
+</html>
