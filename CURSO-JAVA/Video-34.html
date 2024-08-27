@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video-34</title>
+</head>
+<body>
+    <script>
+
+
+//Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+        function contarCaracteres(texto) {
+  return texto.length;
+}
+
+
+console.log(contarCaracteres("Hola Mundo")); 
+
+//Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+
+function recortarTexto(texto, cantidadCaracteres) {
+  return texto.slice(0, cantidadCaracteres);
+}
+
+
+console.log(recortarTexto("Hola Mundo", 4)); 
+
+//Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+
+function dividirTexto(texto, separador) {
+  return texto.split(separador);
+}
+
+
+console.log(dividirTexto('hola que tal', ' ')); 
+
+//Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+
+function repetirTexto(texto, veces) {
+  return texto.repeat(veces);
+}
+
+
+console.log(repetirTexto('Hola Mundo ', 3)); 
+
+
+
+    </script>
+</body>
+</html>
